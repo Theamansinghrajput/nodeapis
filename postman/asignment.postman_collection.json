@@ -1,0 +1,791 @@
+{
+	"info": {
+		"_postman_id": "9c51b650-c5d9-4c57-ba2f-87730fca1159",
+		"name": "asignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21459545"
+	},
+	"item": [
+		{
+			"name": "CreateNewUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "singhaman301111@gmail.com",
+							"description": "Enter you email",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"description": "Enter your password",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "aman",
+							"description": "Enter your account first name",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "singh",
+							"description": "Enter your aaccount last name",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "singhamanji",
+							"description": "Enter your account username",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddNewProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "category",
+							"value": "62f4d24a072b0a4d5ec496d1",
+							"description": "Category id addes by admin",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Onions",
+							"description": "Name of vegitable",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Kanpur",
+							"description": "location you want to serve",
+							"type": "text"
+						},
+						{
+							"key": "start_date",
+							"value": "2021-08-19",
+							"description": "When you want to delivery strted on portal",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is for buying crops from real vegs.",
+							"description": "Description of product",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Vegitables",
+							"description": "Enter Name of the Category",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event/62f4d2f2072b0a4d5ec496d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event",
+						"62f4d2f2072b0a4d5ec496d7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "singhaman30111@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "aman",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "singh",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "singhaman",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event/62f4d2f2072b0a4d5ec496d7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event",
+						"62f4d2f2072b0a4d5ec496d7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "singhaman3011@gmail.com",
+							"description": "your email addres",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"description": "your password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountRecovery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "singhaman",
+							"description": "your account username",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "singhaman30111@gmail.com",
+							"description": "your account password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/recover",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"recover"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Getcategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/category/62f4d24a072b0a4d5ec496d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"62f4d24a072b0a4d5ec496d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updatecategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/category/62f4d24a072b0a4d5ec496d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"62f4d24a072b0a4d5ec496d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletecategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/category/62f4d24a072b0a4d5ec496d1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"category",
+						"62f4d24a072b0a4d5ec496d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPaginationData",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2",
+							"description": "(int) - The current page number"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrderBy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event?sort_order=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					],
+					"query": [
+						{
+							"key": "sort_order",
+							"value": "desc",
+							"description": "The order to sort the events in. Possible options: asc, desc. Default: asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLimitData",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event?limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "10",
+							"description": "The number of results to return per page. Default: 5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchOnData",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event?q=mydata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "mydata",
+							"description": "Keywords or phrases to search for in the event name - Performs Partial Text Search"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GroupDataByDate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event?date=2022-07-27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-07-27",
+							"description": " Retireve all events for the specified date. Format: YYYY-MM-DD (e.g. 2020-01-08) "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WithoutGroupByDate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event?date=2022-07-27&group=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-07-27",
+							"description": "date you want to filter"
+						},
+						{
+							"key": "group",
+							"value": "0",
+							"description": "do you want group the pages "
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WithoutGroup",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjRiYTY2ZmNmOGYxZjUxYTUzNmU1YSIsImVtYWlsIjoic2luZ2hhbWFuMzAxMTFAZ21haWwuY29tIiwidXNlcm5hbWUiOiJzaW5naGFtYW4iLCJmaXJzdE5hbWUiOiJhbWFuIiwibGFzdE5hbWUiOiJzaW5naCIsImlhdCI6MTY2MDIwNTY3MCwiZXhwIjozMzI1NTk1MzQwfQ.Z80-ne2LzYubo_41DJJyUa8cf0ICr4BekSIJfO4x8qg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/event?group=false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"event"
+					],
+					"query": [
+						{
+							"key": "group",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

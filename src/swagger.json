@@ -1,0 +1,385 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "asignment",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "paths": {
+    "/api/auth/register": {
+      "post": {
+        "tags": [
+          "General"
+        ],
+        "summary": "CreateNewUser",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "description": "Enter you email",
+                    "example": "singhaman301111@gmail.com"
+                  },
+                  "password": {
+                    "type": "integer",
+                    "description": "Enter your password",
+                    "example": "123456789"
+                  },
+                  "firstName": {
+                    "type": "string",
+                    "description": "Enter your account first name",
+                    "example": "aman"
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "description": "Enter your aaccount last name",
+                    "example": "singh"
+                  },
+                  "username": {
+                    "type": "string",
+                    "description": "Enter your account username",
+                    "example": "singhamanji"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/event": {
+      "post": {
+        "tags": [
+          "General"
+        ],
+        "summary": "AddNewProduct",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "category": {
+                    "type": "string",
+                    "description": "Category id addes by admin",
+                    "example": "62f4d24a072b0a4d5ec496d1"
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "Name of vegitable",
+                    "example": "Onions"
+                  },
+                  "location": {
+                    "type": "string",
+                    "description": "location you want to serve",
+                    "example": "Kanpur"
+                  },
+                  "start_date": {
+                    "type": "string",
+                    "description": "When you want to delivery strted on portal",
+                    "example": "2021-08-19"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "Description of product",
+                    "example": "This is for buying crops from real vegs."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "General"
+        ],
+        "summary": "WithoutGroup",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "group",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            },
+            "example": "false"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/category": {
+      "post": {
+        "tags": [
+          "General"
+        ],
+        "summary": "CreateNewCategory",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Enter Name of the Category",
+                    "example": "Vegitables"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/event/62f4d2f2072b0a4d5ec496d7": {
+      "put": {
+        "tags": [
+          "General"
+        ],
+        "summary": "DeleteProduct",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "example": "singhaman30111@gmail.com"
+                  },
+                  "password": {
+                    "type": "integer",
+                    "example": "123456789"
+                  },
+                  "firstName": {
+                    "type": "string",
+                    "example": "aman"
+                  },
+                  "lastName": {
+                    "type": "string",
+                    "example": "singh"
+                  },
+                  "username": {
+                    "type": "string",
+                    "example": "singhaman"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "General"
+        ],
+        "summary": "UserLogin",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "description": "your email addres",
+                    "example": "singhaman3011@gmail.com"
+                  },
+                  "password": {
+                    "type": "integer",
+                    "description": "your password",
+                    "example": "123456789"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/recover": {
+      "post": {
+        "tags": [
+          "General"
+        ],
+        "summary": "AccountRecovery",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "description": "your account username",
+                    "example": "singhaman"
+                  },
+                  "email": {
+                    "type": "string",
+                    "description": "your account password",
+                    "example": "singhaman30111@gmail.com"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/api/category/62f4d24a072b0a4d5ec496d1": {
+      "get": {
+        "tags": [
+          "General"
+        ],
+        "summary": "Getcategory",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "General"
+        ],
+        "summary": "Updatecategory",
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "properties": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "General"
+        ],
+        "summary": "Deletecategory",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
